@@ -1,18 +1,23 @@
 /* I will also substract 5rem from the vertical position of the text so as the screen becomes smaller the text will become closer to the left hand side of the display */
 
+
 #page1{
     position: relative;
 
-    height: calc(100vh - 7.5rem);
-    max-height: 744px;
+    height: calc(100vh - var(--dim-navbar-margin));
+    max-height: 864px;
     min-height: 384px;
 
-    margin-top: 5.25rem;
+    margin-top: var(--dim-navbar-margin);
     
+    width: 100%;
 
     background: white url('../Assets/MainPage/graph.svg') no-repeat top left;
     background-repeat: no-repeat;
     background-size: 100% 100%;
+
+    --ft-ratio-title-slogan: 0.778;
+    --ft-ratio-title-skills: 0.69;
 }
 
 #page1 p{
@@ -24,27 +29,27 @@
 
     white-space: nowrap;
     transform: translate(50%);
-    bottom: 49%;
+    bottom: 49.5%;
     right: max(26%, 140px); 
 
     text-align: center;
 }
 
-#page1 .title{
+.title{
     font-size: 5rem;
 }
 
-#page1 .slogan{
+.slogan{
     margin-top: auto;
     font-size: 3.25rem;
 }
 
-#page1 .skills{
+.skills{
     position: absolute;
 
     left: 7%;
     right: 7%;
-    bottom: 3%;
+    bottom: 5%;
 
     white-space: pre-wrap;
     text-align: center;
@@ -55,112 +60,79 @@
 
 /* ------------------------------------ */
 
-#page2{
-    display: flex;
-    flex-direction: row-reverse;
-
-    font-size: 2.5em;
-    background: rgb(224, 224, 224);
-}
-
-#page2 p{
-    padding: 2.5rem;
-    margin: auto;
-}
+/* page 2 */
 
 #page2 img{
-    padding: 2.5rem;
-    margin: auto;
     max-height: 700px;
-    max-width: max(50%, ); 
+    max-width: max(55vw, min(500px, 100%));
+     /* max(55%, min(500px, 95%)); 50vw;  */
 }
 
-
-/* ------------------------------------ */
-
-@media screen and (max-width: 1800px) {
-
-    #page1 .title{
-        font-size: 4rem;
-    }
-    
-    #page1 .slogan{
-        font-size: 2.75rem;
-    }
-
-    #page1 .skills{
-        font-size: 2.5rem;
-        width: 85vw;
-    }
-    
-}
-
-
-@media screen and (max-width: 1150px) { 
+@media screen and (max-width: 1500px) { 
 
     #page2{
         flex-direction: column;
     }
 
-    #page2 img{
-        max-width: max(70%, min(415px, 90%));
-        padding: 1rem 0;
+}
+
+/* ------------------------------------ */
+
+/* 
+    all of the following is simply adjusting the text to make the main page look good
+*/
+
+@media screen and (max-width: 1800px) {
+
+    .title{
+        font-size: 4rem;
+    }
+    
+    .slogan{
+        font-size: 2.75rem;
     }
 
+    .skills{
+        font-size: 2.5rem;
+    }
+    
+}
+
+@media screen and (max-width: 990px) {
+
+    #page1{
+        --ft-size-title: 3.5rem;
+    }
+
+    .title{
+        font-size: var(--ft-size-title);
+    }
+    
+    .slogan{
+        font-size: calc(var(--ft-size-title) * var(--ft-ratio-title-slogan));
+    }
+
+    .skills{
+        font-size: calc(var(--ft-size-title) * var(--ft-ratio-title-skills));
+    }
 }
 
 
 @media screen and (max-width: 640px) {
-
-    #page1 .title{
-        font-size: 3.25rem;  
+    #page1{
+        --ft-size-title: clamp(2.15rem, 6.8vw, 3.15rem); 
     }
-    
-    #page1 .slogan{
-        font-size: 2.5rem;
+
+    .slogan{
         text-align: right;
     }
-
-    #page1 .skills{
-        font-size: 2.25rem;
-    }
-    
 }
 
 
-@media screen and (max-device-width: 440px){
-    #page1 .title-box{
-        bottom: 50%;
+@media screen and (max-device-width: 475px){
+    .title-box{
         transform: translate(0);
-        right: 1em;
-    }
-
-    #page1 .title{
-        font-size: 3rem;
-    }
-    
-    #page1 .slogan{
-        font-size: 2.25rem;
-    }
-
-    #page1 .skills{
-        font-size: 2rem;
+        right: 0.5em;
     }
 }
-
-
-@media screen and (max-device-width: 370px){
-    #page1 .title{
-        font-size: 2.5rem;
-    }
-    
-    #page1 .slogan{
-        font-size: 2rem;
-    }
-
-    #page1 .skills{
-        font-size: 1.5rem;
-    }
-}
-
 

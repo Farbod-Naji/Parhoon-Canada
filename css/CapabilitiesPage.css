@@ -3,54 +3,38 @@ html {
 }
 
 #mainPage{
-    display: flex;
     margin-top: 5rem;
-    padding: 3rem 0;
-    background-color: white;
-    font-size: 2.5rem;
+    width: 95%;
 }
 
-#mainPage #slideshow1-container{
-    order: 1;
+#mainPage #slideshow1{
     flex: 1 0 auto;
 
-    padding: 0 2rem;
+    padding: 0 !important;
     margin: auto;
 }   
 
-#mainPage #slideshow1-container .mySlides img{
+#mainPage #slideshow1 .mySlides img{
     max-height: 560px;      /* setting the maximum size limit for image */
-    max-width: max(60vw, 600px);        /* setting the minimum size limit for image */
+    max-width: max(60vw, min(800px, 87.5vw));        /* setting the minimum size limit for image */
 }
 
-#mainPage p{
-    order: 0;
-    flex: 1 1 auto;
 
-    margin: auto;
-    padding-top: 1em;
-    padding-left: 1em;
-    padding-right: 1em;
-
-}
 
 /* ------------------------------------ */
 
 
 #listPage{
-    margin: auto;
-    background-color: rgb(224, 224, 224);
-    padding-top: 3rem;
+    
+    
 }
 
 #listIntroText {
-    font-size: 3em;
-    padding-left: 3rem;
-    margin-top: 0;
+    font-size: var(--ft-size-b2);
 }
 
 #listIntroText p{
-    margin-top: 0;
+
 }
 
 #textList{
@@ -63,7 +47,7 @@ html {
 }
 
 #listPage ul{
-    font-size: 2.5em;
+    font-size: var(--ft-size);
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 0;
@@ -86,20 +70,19 @@ html {
 /* ------------------------------------ */
 
 #knowledgePage{
-    margin: 0;
-    background-color: white;
-    padding: 2rem 0;
+    width: 95%;
+    font-size: var(--ft-size);
 }
 
 #knowledgePage #knowledgePageImage{
     float: right;
-    
     margin: auto 0;
-    padding: 0 2em;
+    padding: 2em;
+    padding-top: 0;
 }
 
 #knowledgePage #slideshow2{
-    margin: 0 auto;
+    margin: auto;
 }
 
 #knowledgePage #slideshow2 img{
@@ -109,6 +92,11 @@ html {
 
     max-height: 460px;  /* setting the maximum size limit for image */
     max-width: max(55vw, 402px);    /* setting the minimum size limit for image */
+}
+
+#knowledgePage br{
+    font-size: var(--ft-size);
+    margin: 2em;
 }
 
 #knowledgePage #introduction-text{
@@ -145,14 +133,24 @@ html {
 }
 
 /* ---------------------------------------------- */
+
+@media screen and (max-device-width: 425px), (max-width: 550px){
+
+    #knowledgePage #knowledgePageImage{
+        padding: 0;
+    }
+    
+}
+
+
 /* on mobile: 400px medium UP*/
-@media screen and (max-device-width: 400px){
+@media screen and (max-device-width: 950px){
     #knowledgePage #slideshow2{
         width: auto !important;
     }
 }
 
-@media screen and (max-device-width: 560px), (max-width: 650px){
+@media screen and (max-device-width: 560px), (max-width: 950px){
     #knowledgePage #knowledgePageImage{
         float: none !important;
     }
@@ -162,7 +160,7 @@ html {
 
 @media screen and (max-device-width: 560px), (max-width: 1130px){
     #mainPage{
-        flex-direction: column-reverse;
+        flex-direction: column;
     }
     
     #mainPage #slideshow1-container{
@@ -175,10 +173,6 @@ html {
     }
 
     /* ---------------------------------------------- */
-
-    #knowledgePage-Introduction{
-        flex-direction: column-reverse;
-    }
     
     #mainPage #slideshow1-container{
         margin: auto;
@@ -191,12 +185,7 @@ html {
 }
 
 
-@media screen and (max-device-width: 560px), (max-width: 840px){
-
-    #listPage{
-        padding-bottom: 3rem;
-    }
-
+@media screen and (max-device-width: 560px), (max-width: 900px){
 
     #listPage ul{
         display: none !important;   
@@ -212,11 +201,8 @@ html {
 
 /* on mobile: 560px medium UP - ipad DOWN | on browser: 800px DOWN*/
 
-@media screen and (max-device-width: 560px), (max-width: 840px){
+@media screen and (max-device-width: 560px), (max-width: 900px){
 
-    #listPage{
-        padding-bottom: 3rem;
-    }
 
 
     #listPage ul{

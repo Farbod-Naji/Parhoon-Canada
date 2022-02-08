@@ -1,9 +1,5 @@
 <!--
-    1. fix font
-    2. make it work on iphone 5
-    3. make the pictures biggers
-    4. make slideshow UI white shadows work
-    5. small adjustment on the MainText
+    1. make all page properties and the capabilities properties !important 
 -->
 
 <!DOCTYPE html>
@@ -19,9 +15,9 @@
 
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-        <link rel="stylesheet" href="../css/AllPages.css">
         <link rel="stylesheet" href="../css/CapabilitiesPage.css">
 
+        <link rel="stylesheet" href="../GlobalCode/AllPages.css">
         <link rel="stylesheet" href="../GlobalCode/navBar.css">
         <link rel="stylesheet" href="../GlobalCode/Slideshow.css">
         <link rel="stylesheet" href="../GlobalCode/footer.css">
@@ -30,7 +26,7 @@
 
         <link rel="icon" href="../Assets/NavBar/logo.svg">
 
-        
+         
     </head>
 
     <body>
@@ -54,47 +50,48 @@
             <img src="../Assets/NavBar/menu-icon.svg" height="25rem" class="menu-icon" style ="display: none;">
         </nav>
 
-        <div class="page" id="mainPage">
-            <div id="slideshow1-container">
-                <div class="slideshow" id="slideshow1">
-                    <p style="display: none;">2</p>
+        <!--  class="page"  -->
+        <div class="page-setup img-info-template reverse-img-info-template" id="mainPage">
+            
+            <div class="slideshow" id="slideshow1">
+                <p style="display: none;">2</p>
 
-                    <div class="mySlides fade">
-                        <div class="numbertext slide_UI_element">1 / 3</div>
-                        <img src="../Assets/CapabilitiesPage/Slide_Show_1/1.bmp" style="width:100%">
-                        <div class="text">Caption Text</div>
-                    </div>
+                <div class="mySlides fade">
+                    <div class="numbertext slide_UI_element">1 / 3</div>
+                    <img src="../Assets/CapabilitiesPage/Slide_Show_1/1.bmp" style="width:100%">
+                    <div class="text">Caption Text</div>
+                </div>
+            
+                <div class="mySlides fade">
+                    <div class="numbertext slide_UI_element">2 / 3</div>
+                    <img src="../Assets/CapabilitiesPage/Slide_Show_1/2.bmp" style="width:100%">
+                    <div class="text">Caption Two</div>
+                </div>
+            
+                <div class="mySlides fade">
+                    <div class="numbertext slide_UI_element">3 / 3</div>
+                    <img src="../Assets/CapabilitiesPage/Slide_Show_1/3.bmp" style="width:100%">
+                    <div class="text">Caption Three</div>
+                </div>
                 
-                    <div class="mySlides fade">
-                        <div class="numbertext slide_UI_element">2 / 3</div>
-                        <img src="../Assets/CapabilitiesPage/Slide_Show_1/2.bmp" style="width:100%">
-                        <div class="text">Caption Two</div>
-                    </div>
-                
-                    <div class="mySlides fade">
-                        <div class="numbertext slide_UI_element">3 / 3</div>
-                        <img src="../Assets/CapabilitiesPage/Slide_Show_1/3.bmp" style="width:100%">
-                        <div class="text">Caption Three</div>
-                    </div>
-                    
-                    <div class="slideshow-nav-arrow">
-                        <a class="prev slide_UI_element" onclick="Plus_Slides('slideshow1', -1)">&#10094;</a>
-                        <a class="next slide_UI_element" onclick="Plus_Slides('slideshow1', 1)">&#10095;</a>
-                    </div>
-                    <div class="slideshow-dots-container" style="text-align:center">
-                        <span class="dot slide_UI_element" onclick="Current_Slide('slideshow1', 0)"></span>
-                        <span class="dot slide_UI_element" onclick="Current_Slide('slideshow1', 1)"></span>
-                        <span class="dot slide_UI_element" onclick="Current_Slide('slideshow1', 2)"></span>
-                    </div>
+                <div class="slideshow-nav-arrow">
+                    <a class="prev slide_UI_element" onclick="Plus_Slides('slideshow1', -1)">&#10094;</a>
+                    <a class="next slide_UI_element" onclick="Plus_Slides('slideshow1', 1)">&#10095;</a>
+                </div>
+                <div class="slideshow-dots-container" style="text-align:center">
+                    <span class="dot slide_UI_element" onclick="Current_Slide('slideshow1', 0)"></span>
+                    <span class="dot slide_UI_element" onclick="Current_Slide('slideshow1', 1)"></span>
+                    <span class="dot slide_UI_element" onclick="Current_Slide('slideshow1', 2)"></span>
                 </div>
             </div>
         
             <p class="mobile-text-size">    Parhoon Canada provides on-site vibration analysis, modal analysis, condition monitoring and balancing service for industrial equipment.  Our qualified vibration analysts with use of sophisticated analyser can diagnose, detect, and prevent break-down and predict safe time running in rotating machinery. Our commitment to brilliance matching with our state-of-the-art vibration competencies makes Parhoon Canada your trusted partner.</p>
         </div>
 
-        <div class="page" id="listPage">
+        <!-- class="page" -->
+        <div class="page-setup page-line" id="listPage">
             <div class="mobile-text-padding" id="listIntroText">
-                <p class=" mobile-text-size">    Vibration analysis capabilities:</p>
+                <p class="mobile-text-size">    Vibration analysis capabilities:</p>
             </div>
 
             <div id="textList">
@@ -120,55 +117,55 @@
                 <li id="JS-List-Final-Element">Bump Testing</li>
             </ul>
         </div>      
-
-        <div class = "page" id = "knowledgePage">
-            <div id="knowledgePage-Introduction">
-                <div id="knowledgePageImage">
-                    <div class="slideshow" id="slideshow2">
-                        <p style="display: none;">2</p>
-                        <div class="mySlides fade">
-                        <div class="numbertext slide_UI_element">1 / 3</div>
-                        <img src="../Assets/CapabilitiesPage/Slide_Show_2/Capture.PNG" style="width:100%">
-                        <div class="text">Caption Text</div>
-                        </div>
-                    
-                        <div class="mySlides fade">
-                        <div class="numbertext slide_UI_element">2 / 3</div>
-                        <img src="../Assets/CapabilitiesPage/Slide_Show_2/Capture1.PNG" style="width:100%">
-                        <div class="text">Caption Two</div>
-                        </div>
-                    
-                        <div class="mySlides fade">
-                        <div class="numbertext slide_UI_element">3 / 3</div>
-                        <img src="../Assets/CapabilitiesPage/Slide_Show_2/Capture2.PNG" style="width:100%">
-                        <div class="text">Caption Three</div>
-                        </div>
-                    
-                        <a class="prev slide_UI_element" onclick="Plus_Slides('slideshow2', -1)">&#10094;</a>
-                        <a class="next slide_UI_element" onclick="Plus_Slides('slideshow2', 1)">&#10095;</a>
-                    
-                        <div class="slideshow-dots-container" style="text-align:center">
-                        <span class="dot slide_UI_element" onclick="Current_Slide('slideshow2', 0)"></span>
-                        <span class="dot slide_UI_element" onclick="Current_Slide('slideshow2', 1)"></span>
-                        <span class="dot slide_UI_element" onclick="Current_Slide('slideshow2', 2)"></span>
-                        </div>  
+        
+        <!--  class = "page"  -->
+        <div class="page-setup page-line" id="knowledgePage">
+            <div id="knowledgePageImage">
+                <div class="slideshow" id="slideshow2">
+                    <p style="display: none;">2</p>
+                    <div class="mySlides fade">
+                    <div class="numbertext slide_UI_element">1 / 3</div>
+                    <img src="../Assets/CapabilitiesPage/Slide_Show_2/Capture.PNG" style="width:100%">
+                    <div class="text">Caption Text</div>
                     </div>
-                </div>
-
-                <div id="introduction-text">
-                    <p class="mobile-text-padding mobile-text-size">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Vibration analysis is used to determine the operating and mechanical condition of equipment. A major advantage is that vibration analysis can identify developing problems before they become too serious and cause unscheduled downtime. This can be achieved by conducting regular monitoring of machine vibrations either on continuous basis or at scheduled intervals. The most common fault diagnosis in industry are: </p>
+                
+                    <div class="mySlides fade">
+                    <div class="numbertext slide_UI_element">2 / 3</div>
+                    <img src="../Assets/CapabilitiesPage/Slide_Show_2/Capture1.PNG" style="width:100%">
+                    <div class="text">Caption Two</div>
+                    </div>
+                
+                    <div class="mySlides fade">
+                    <div class="numbertext slide_UI_element">3 / 3</div>
+                    <img src="../Assets/CapabilitiesPage/Slide_Show_2/Capture2.PNG" style="width:100%">
+                    <div class="text">Caption Three</div>
+                    </div>
+                
+                    <a class="prev slide_UI_element" onclick="Plus_Slides('slideshow2', -1)">&#10094;</a>
+                    <a class="next slide_UI_element" onclick="Plus_Slides('slideshow2', 1)">&#10095;</a>
+                
+                    <div class="slideshow-dots-container" style="text-align:center">
+                    <span class="dot slide_UI_element" onclick="Current_Slide('slideshow2', 0)"></span>
+                    <span class="dot slide_UI_element" onclick="Current_Slide('slideshow2', 1)"></span>
+                    <span class="dot slide_UI_element" onclick="Current_Slide('slideshow2', 2)"></span>
+                    </div>  
                 </div>
             </div>
+
+            <div id="introduction-text">
+                <p class="mobile-text-padding mobile-text-size">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Vibration analysis is used to determine the operating and mechanical condition of equipment. A major advantage is that vibration analysis can identify developing problems before they become too serious and cause unscheduled downtime. This can be achieved by conducting regular monitoring of machine vibrations either on continuous basis or at scheduled intervals. The most common fault diagnosis in industry are: </p>
+            </div>
+
             
             <div id="mainText">
-                <br><p class="mobile-text-padding mobile-text-size">   <b>Balancing:</b> Imbalance is probably the most common source of vibration on rotating machinery. Depending on the machine and the rotating speed range the rotor can be considered to be rigid or flexible. In the first case, the Single / Dual plane balancing module will be used. In the second case a multiplane approach should be preferred and the associated Multiplane module should be used.</p>
-                <br><p class="mobile-text-padding mobile-text-size">   <b>Roller Bearings:</b> Damaged roller bearings are common. Their vibration signatures are usually measured with an accelerometer mounted on the bearing housing. In particular, the FFT-Diagnostics module uses envelope demodulation to analyze these vibration sources to determine if the source is from the roller elements or the races.</p>
-                <br><p class="mobile-text-padding mobile-text-size">   <b>Gear Analysis:</b> Gear boxes have a complex vibration signature, usually occurring at high frequencies. The FFT-Diagnostics tool, such as cepstrum, kurtosis and harmonic markers are necessary to describe and understand the generated vibrations. The virtual tachometers management feature allows the analyst to determine the speed and phase information based on the gea</p>
-                <br><p class="mobile-text-padding mobile-text-size">   <b>Blade Modal Testing:</b> When blade dynamic structural characteristics should be determined, they are submitted to modal testing: based on impact hammer testing or shaker excitation. Based on multichannel analyzers, vibration response can be captured by accelerometers or strain gauges. Modal analysis, can process the FRFs to give the modal characteristics.</p>
-                <br><p class="mobile-text-padding mobile-text-size">   <b>Damping & Isolation:</b> Dynamic coupling between machine trains and their skids or foundations can be a problem during the machine installation and the field acceptance test. Excitation frequencies should not match the response frequencies of the hosting structure: the mounting choice is key. To tackle this issue, transfer functions, ODS, and damping calculations assist the user in the procedures</p>
-                <br><p class="mobile-text-padding mobile-text-size">   <b>ODS (Operating Deflection Shape):</b> Operating deflection shape is an important analysis procedure used to locate machinery and piping system deflection during operation. It is based upon simplified geometry description of the machine train. After measuring the vibration response at multiple locations, the mechanical source can be identified. The ODS software module helps to determine vibration sources, a transmission point and eventually a mechanical modification to be implemented.</p>
-                <br><p class="mobile-text-padding mobile-text-size">   <b>Fluid Film Bearings:</b> Relative shaft vibration is captured with proximity probes. Analyzing this data requires a number of software tools such as orbit and shaft centerline as well as order analysis (nX, Bode, Polar, etc.). These tools display the physical motion of the shaft and let you detect faults such as oil whirl & whip, preload, misalignment, rub and others.</p>
-                <br><p class="mobile-text-padding mobile-text-size">   <b>Octave & Sound Intensity Safety:</b> The ambient noise generated from rotating machinery can be evaluated using general tools such as the 1/3 octave analysis. But more thorough measurements can be achieved using the sound power value. The sound intensity technique is often completed in the field thanks to its portability and adaptability.</p>
+                <br><br><p class="mobile-text-padding mobile-text-size">   <b>Balancing:</b> Imbalance is probably the most common source of vibration on rotating machinery. Depending on the machine and the rotating speed range the rotor can be considered to be rigid or flexible. In the first case, the Single / Dual plane balancing module will be used. In the second case a multiplane approach should be preferred and the associated Multiplane module should be used.</p>
+                <br><br><p class="mobile-text-padding mobile-text-size">   <b>Roller Bearings:</b> Damaged roller bearings are common. Their vibration signatures are usually measured with an accelerometer mounted on the bearing housing. In particular, the FFT-Diagnostics module uses envelope demodulation to analyze these vibration sources to determine if the source is from the roller elements or the races.</p>
+                <br><br><p class="mobile-text-padding mobile-text-size">   <b>Gear Analysis:</b> Gear boxes have a complex vibration signature, usually occurring at high frequencies. The FFT-Diagnostics tool, such as cepstrum, kurtosis and harmonic markers are necessary to describe and understand the generated vibrations. The virtual tachometers management feature allows the analyst to determine the speed and phase information based on the gea</p>
+                <br><br><p class="mobile-text-padding mobile-text-size">   <b>Blade Modal Testing:</b> When blade dynamic structural characteristics should be determined, they are submitted to modal testing: based on impact hammer testing or shaker excitation. Based on multichannel analyzers, vibration response can be captured by accelerometers or strain gauges. Modal analysis, can process the FRFs to give the modal characteristics.</p>
+                <br><br><p class="mobile-text-padding mobile-text-size">   <b>Damping & Isolation:</b> Dynamic coupling between machine trains and their skids or foundations can be a problem during the machine installation and the field acceptance test. Excitation frequencies should not match the response frequencies of the hosting structure: the mounting choice is key. To tackle this issue, transfer functions, ODS, and damping calculations assist the user in the procedures</p>
+                <br><br><p class="mobile-text-padding mobile-text-size">   <b>ODS (Operating Deflection Shape):</b> Operating deflection shape is an important analysis procedure used to locate machinery and piping system deflection during operation. It is based upon simplified geometry description of the machine train. After measuring the vibration response at multiple locations, the mechanical source can be identified. The ODS software module helps to determine vibration sources, a transmission point and eventually a mechanical modification to be implemented.</p>
+                <br><br><p class="mobile-text-padding mobile-text-size">   <b>Fluid Film Bearings:</b> Relative shaft vibration is captured with proximity probes. Analyzing this data requires a number of software tools such as orbit and shaft centerline as well as order analysis (nX, Bode, Polar, etc.). These tools display the physical motion of the shaft and let you detect faults such as oil whirl & whip, preload, misalignment, rub and others.</p>
+                <br><br><p class="mobile-text-padding mobile-text-size">   <b>Octave & Sound Intensity Safety:</b> The ambient noise generated from rotating machinery can be evaluated using general tools such as the 1/3 octave analysis. But more thorough measurements can be achieved using the sound power value. The sound intensity technique is often completed in the field thanks to its portability and adaptability.</p>
             </div>
 
         </div>

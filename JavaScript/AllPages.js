@@ -55,11 +55,11 @@ function Check_Menu_Button(){
         e.preventDefault();
         if(menu.classList.contains("menu-active")){
             //the menu is closing
-            button[0].src = "/Assets/NavBar/menu-close-icon.svg";
+            button[0].src = "../Assets/NavBar/menu-close-icon.svg";
             button[0].style.margin = "0 0 0 0"
         }
         else {
-            button[0].src = "/Assets/NavBar/menu-icon.svg";
+            button[0].src = "../Assets/NavBar/menu-icon.svg";
             button[0].style.margin = "auto 1em auto 0"
         }
     } );

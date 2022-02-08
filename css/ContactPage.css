@@ -1,29 +1,22 @@
 #mainPage{
-    margin: 0;
     margin-top: 5rem;
-    padding-bottom: 5rem;
-    height: max(calc(100vh - 5rem), 458px);
+    /* height: max(calc(100vh - 5rem), 458px); */
     /* height: min-content; */
     /* min-height: min-content; */
-
-    background: url('../Assets/ContactPage/ContactPageBackground.gif') no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
 
     overflow: hidden;
 }
 
-
-a{
-    color: white;
+#mainPage img{
+    display: block;
+    max-width: 60vw;
+    margin: auto;
 }
+
 
 /* ------------------------------------ */
 
 #contactInfo{
-    color: white;
     padding-left: 3em;
 }
 
@@ -33,15 +26,40 @@ a{
     
     text-align: left;
     white-space: normal;
+    
+}
+
+#contactInfo a{
+    font-weight: bold;
+    text-decoration: underline;
+    text-decoration-line: underline;
+    color: black;
 }
 
 /* ------------------------------------ */
 
 #title{
+    text-align: center;
     font-size: 3em !important;
 }
 
+@media screen and (max-width: 1700px){
+    #mainPage img{
+        display: none;
+        /* flex-direction: column !important; */
+        /* gap: 0; */
+    }
+    
+    #contactInfo #information {
+        padding-left: 0.25em;
+    }
+}
+
 @media screen and (max-device-width: 770px){
+    #mainPage{
+        width: 100%;
+    }
+
     #contactInfo{
         padding-top: 1rem;
         padding-left: 0.5em;
