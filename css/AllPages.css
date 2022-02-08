@@ -1,0 +1,51 @@
+
+
+html{
+    font-size: 62.5%;
+}
+
+body {
+    margin: 0;
+    background-color:white;
+    z-index: 1;
+}
+
+/* ------------------------------------ */
+
+.flex-box{
+    display: flex;
+}
+
+/* make the images and the nav bar not ele*/
+img, .navBar, .slideshow-container{
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently supported by Chrome, Opera and Firefox */
+}
+
+/* ------------------ top nav ------------------ */
+
+
+@media screen and (max-device-width: 770px){
+
+    .mobile-text-padding{
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+
+    .mobile-text-size{
+        font-size: 0.9em !important;
+    }
+
+}
+
+@media screen and (max-device-width: 560px){
+
+    .info-text{
+        font-size: 2.3em !important;
+    }
+
+}

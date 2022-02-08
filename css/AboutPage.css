@@ -1,0 +1,212 @@
+#CEO-page{
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2, auto);
+    margin-top: 5.25rem;
+} 
+
+
+/* ------------------------------------ */
+
+#CEO-page #CEO-intro-profile{
+    display: flex;
+    flex-direction: column;
+    order: 1;
+    grid-row: span 2;
+}
+
+#CEO-page #CEO-intro-profile img{
+    margin: auto;
+    margin-bottom: 0;
+    max-height: 725px;               /* setting the maximum size limit for image */
+    max-width: max(55vw , 280px);    /* setting the minimum size limit for image */
+    padding: 2rem;
+    padding-bottom: 1rem;
+}
+
+#CEO-page  #CEO-intro-profile p{
+    margin: auto;
+    margin-top: 0;
+    font-size: 1.8rem;
+    padding-bottom: 1em;
+}
+
+
+/* ------------------------------------ */
+#CEO-page #CEO-intro-text{
+    margin: auto;
+    order: 0;
+    font-size: 2.5rem;
+    align-items: end;
+}
+
+#CEO-page #CEO-intro-text p{
+    display: block;
+    white-space: pre-wrap;
+    padding: 2rem;
+    margin: 0;
+}
+
+
+
+#CEO-page #CEO-profile p{
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+
+/* ------------------------------------ */
+
+#CEO-page #CEO-intro-publications{
+    order: 2;
+
+    font-size: 2.5rem;
+    padding: 2rem;
+}
+
+#CEO-page #CEO-intro-publications ol{
+    display: block;
+    width: auto;
+    padding-left: 1.1em;
+}
+
+#CEO-page #CEO-intro-publications ol li{
+    text-align: left;
+    margin-top: 2%;
+}
+
+#CEO-page #CEO-intro-publications ol li a{
+    width: 100%;
+    color: blue;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#CEO-page #CEO-intro-publications ol li a p{
+    display: inline;
+    color: black;
+}
+
+#CEO-page #CEO-intro-publications ol li a .ref{
+    text-decoration: underline !important;
+    font-size: 0.75em;
+
+}
+
+/* ------------------------------------ */
+
+.tool-page{
+    display: flex;
+    font-size: 2.5rem;
+
+}
+
+#tool1{
+    flex-direction: row-reverse;
+    background: rgb(224, 224, 224);
+}
+
+
+#tool2{
+    flex-direction: row;
+    background: white;
+}
+
+.tool-page p{
+    margin: auto;
+    padding: 1em;
+}
+
+.tool-page img{
+    margin: auto;
+    padding: 1em;
+
+    max-width: 60%;
+    max-height: 650px;
+}
+
+/* ------------------------------------ */
+
+@media screen and (max-device-width: 770px){
+
+    #CEO-page #CEO-intro-publications {
+        padding: 0.5rem;
+    }
+
+    #CEO-page #CEO-intro-text p {
+        padding: 1rem;
+    }
+
+    .tool-page p{
+        padding: 0.5em !important;
+    }
+    
+    .tool-page img{
+        padding: 0.5em !important;
+    }
+
+}
+
+@media screen and (max-width: 1250px){
+    #CEO-page #CEO-intro-profile{
+        grid-row: span 1;
+    }
+
+    #CEO-page #CEO-intro-publications{
+        grid-column: span 2;
+    }
+}
+
+@media screen and (max-device-width: 560px), (max-width: 815px){
+    #CEO-page{
+        display: block !important;
+    }
+
+    #CEO-page #CEO-intro-profile{
+        float: right;
+    }
+}
+
+@media screen and (max-device-width: 560px), (max-width: 600px){
+
+    #CEO-page #CEO-intro-profile img{
+        margin-top: 0;
+    }
+
+    #CEO-page #CEO-intro-profile p{
+        padding-bottom: 0;
+    }
+
+    #CEO-page #CEO-intro-profile{
+        float: none;
+    }
+
+}
+
+@media screen and (max-device-width: 560px){
+
+    #CEO-page #CEO-image #CEO-image-box p{
+        font-size: 1.5rem;
+    }
+
+    #CEO-page #publications ol li:first-of-type{
+        margin-top: 5rem !important;
+    }
+
+}
+
+
+@media screen and (max-device-width: 640px), (max-width: 1150px) {
+
+    .tool-page{
+        flex-direction: column !important;
+    }
+
+    .tool-page p{
+        padding: 1em 1.5em;
+    }
+
+    .tool-page img{
+        max-width: 90%;
+    }
+}

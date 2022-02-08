@@ -1,0 +1,232 @@
+html {
+    background-color: white;
+}
+
+#mainPage{
+    display: flex;
+    margin-top: 5rem;
+    padding: 3rem 0;
+    background-color: white;
+    font-size: 2.5rem;
+}
+
+#mainPage #slideshow1-container{
+    order: 1;
+    flex: 1 0 auto;
+
+    padding: 0 2rem;
+    margin: auto;
+}   
+
+#mainPage #slideshow1-container .mySlides img{
+    max-height: 560px;      /* setting the maximum size limit for image */
+    max-width: max(60vw, 600px);        /* setting the minimum size limit for image */
+}
+
+#mainPage p{
+    order: 0;
+    flex: 1 1 auto;
+
+    margin: auto;
+    padding-top: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
+
+}
+
+/* ------------------------------------ */
+
+
+#listPage{
+    margin: auto;
+    background-color: rgb(224, 224, 224);
+    padding-top: 3rem;
+}
+
+#listIntroText {
+    font-size: 3em;
+    padding-left: 3rem;
+    margin-top: 0;
+}
+
+#listIntroText p{
+    margin-top: 0;
+}
+
+#textList{
+    display: none;
+    text-align: center;
+}
+
+#textList p{
+    margin-top: 0;
+}
+
+#listPage ul{
+    font-size: 2.5em;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 0;
+}
+
+#listPage li{
+    margin-right: auto;
+    margin-left: 40px;
+    margin-bottom: 1.5em;
+    flex-basis: 330px;
+}
+
+#listPage ul span{
+    margin-right: auto;
+    margin-left: 40px;
+    flex-basis: 330px;
+}
+
+
+/* ------------------------------------ */
+
+#knowledgePage{
+    margin: 0;
+    background-color: white;
+    padding: 2rem 0;
+}
+
+#knowledgePage #knowledgePageImage{
+    float: right;
+    
+    margin: auto 0;
+    padding: 0 2em;
+}
+
+#knowledgePage #slideshow2{
+    margin: 0 auto;
+}
+
+#knowledgePage #slideshow2 img{
+    display: block;
+    object-fit: contain;
+    width: 100%;
+
+    max-height: 460px;  /* setting the maximum size limit for image */
+    max-width: max(55vw, 402px);    /* setting the minimum size limit for image */
+}
+
+#knowledgePage #introduction-text{
+    flex: 1 1 auto;
+    order: 1;
+    box-sizing: border-box;
+    width: 100%;
+    margin: auto;
+
+    font-size: 2.5rem;
+}
+ 
+#knowledgePage #introduction-text p{
+    text-align: left;
+    white-space: pre-wrap;
+    padding: 0 1em;
+    margin-bottom: 0;
+}
+
+#knowledgePage .list{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#knowledgePage #mainText{
+    font-size: 2.5rem;
+}
+
+#knowledgePage #mainText p{
+    white-space: pre-wrap;
+    margin: 0;
+    padding: 0 calc(1rem + 1%);
+}
+
+/* ---------------------------------------------- */
+/* on mobile: 400px medium UP*/
+@media screen and (max-device-width: 400px){
+    #knowledgePage #slideshow2{
+        width: auto !important;
+    }
+}
+
+@media screen and (max-device-width: 560px), (max-width: 650px){
+    #knowledgePage #knowledgePageImage{
+        float: none !important;
+    }
+}
+
+/* on mobile: 400px medium UP - ipad DOWN*/
+
+@media screen and (max-device-width: 560px), (max-width: 1130px){
+    #mainPage{
+        flex-direction: column-reverse;
+    }
+    
+    #mainPage #slideshow1-container{
+        margin: auto;
+    }
+
+    #mainPage p {
+        box-sizing: border-box;
+        width: 100% !important;
+    }
+
+    /* ---------------------------------------------- */
+
+    #knowledgePage-Introduction{
+        flex-direction: column-reverse;
+    }
+    
+    #mainPage #slideshow1-container{
+        margin: auto;
+    }
+
+    #mainPage p {
+        box-sizing: border-box;
+        width: 100% !important;
+    }
+}
+
+
+@media screen and (max-device-width: 560px), (max-width: 840px){
+
+    #listPage{
+        padding-bottom: 3rem;
+    }
+
+
+    #listPage ul{
+        display: none !important;   
+    }
+
+    #listPage #textList{
+        display: block !important;
+        width: 95%;
+        margin: 0 auto;
+        font-size: 2.5em;
+    }
+}
+
+/* on mobile: 560px medium UP - ipad DOWN | on browser: 800px DOWN*/
+
+@media screen and (max-device-width: 560px), (max-width: 840px){
+
+    #listPage{
+        padding-bottom: 3rem;
+    }
+
+
+    #listPage ul{
+        display: none !important;   
+    }
+
+    #listPage #textList{
+        display: block !important;
+        width: 95%;
+        margin: 0 auto;
+        font-size: 2.5em;
+    }
+}

@@ -1,0 +1,150 @@
+<!--
+    the API key = 
+    the IDLE for finding out the visitors IP = $ curl 'https://api.ipgeolocation.io/getip' { "ip": "1.1.1.1" }
+    the IDLE url = https://api.ipgeolocation.io/ipgeo?apiKey=8b43506bbafd417d988ed66f70b6af75&ip=72.141.151.149&fields=country_name&output=json
+    
+    using Desmos API v1.5: <script src="https://www.desmos.com/api/v1.5/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
+
+notes for next version:
+    1. Reorganize the mainpage (add the last section to main page, add button and text for each page)
+    2. fix turbine img in capabilities
+    3. fix the fact that the white background color of the images against the gray color of the page make it look ugly 
+    
+    4. maybe change font [mina]
+    
+    5. fix footer for wraping weird
+
+    6. make the main page look better on bigger screen by adding padding to the top and bottom of the main page
+    
+    7. This page does not use demsos' API for the rendering of the image, instead it uses the given svg
+    8. why is the graph.svg look pixeled
+
+
+    2. set variable for white, grey and red colors used
+    3. get to the font family and typography
+    4. {change font size from em and pix to rem} and {make all dimension depend on the rem and em}
+    5. setup SEO
+    6. start the new setup formate for html that is class based ???
+
+
+    8. figure out why is it the website does not load right when CTRL+S when device-max-width and device-width 
+
+    add so animation to the navbar (slight expansion)
+    compares all the images , add alt to image, add title to links
+    make mobile nav bar look better
+
+    What changed from last version:
+        1. all the code was cleaned up and now works properly
+        2. seperated footer and navBar from the AllPages.css
+        3. added Project Page
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <link rel="stylesheet" href="../css/AllPages.css">
+        <link rel="stylesheet" href="../css/MainPage.css">
+        <link rel="stylesheet" href="../GlobalCode/navBar.css">
+        <link rel="stylesheet" href="../GlobalCode/footer.css">
+
+    
+
+
+        <script src="../JavaScript/jquery-3.5.1.js"></script>
+        <!-- <script src="https://www.desmos.com/api/v1.5/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script> -->
+    
+
+        <title>Main Page - Parhoon Canada Inc</title>
+        <!-- <meta name="description" content=""> -->
+        <!-- <meta name="keywords" content=""> -->
+        <!-- <meta name="author" content=""> -->
+    
+        <link rel="icon" href="../Assets/NavBar/logo.svg">
+        <!-- <link rel="shortcut icon" type="image/ico" href="../Assets/NavBar/logo.svg"> -->
+
+    </head>
+
+    <body>
+        <nav class="navBar">
+            <div class="icon">
+                <a href="MainPage.html">
+                    <div class="icon-box">
+                        <img src="../Assets/NavBar/logo.svg" height="45rem"><p class="iconText">arhoon</p>
+                    </div>
+                </a>
+            </div>
+            
+            <ul>
+                <!-- <li><a href="../Farsi/MainPage.html" class="not-show-class link-button" id="multi-language-button"><p>English/فارسی</p></a></li> -->
+                <li><a href="MainPage.html" class="link-button"><p>Home</p></a></li>
+                <li><a href="AboutPage.html" class="link-button"><p>About us</p></a></li>
+                <li><a href="CapabilitiesPage.html" class="link-button"><p>Capabilities</p></a></li>
+                <li><a href="ProjectsPage.html" class="not-show-class link-button"><p>Projects</p></a></li>
+                <li><a href="ContactPage.html" class="link-button"> <p>Contact us</p></a></li>
+            </ul>
+            <img src="../Assets/NavBar/menu-icon.svg" height="25rem" class="menu-icon" style ="display: none;">
+        </nav>
+    
+        
+        <div  id ="page1">
+            <!-- <div id="calculator"></div> -->
+
+            <div class="title-box">
+                <p class="title">Parhoon Canada Inc</p>
+                <p class="slogan">Vibration is Awareness</p>
+            </div>
+            <p class="skills">Vibration Analysis, Modal Analysis, Vibrational Monitoring, Noise Control, Reliability</p>
+        </div>
+
+        <!--
+        <div class = "navArrow">
+            <img src="/Assets/arrow-up.svg" height="65px" class = "upArrow">
+            <br>
+            <img src="/Assets/arrow_down.svg" height="65px" class = "downArrow">
+        </div>
+        -->
+
+        <div class = "page" id="page2">
+            <img src="../Assets/MainPage/Engine.gif">
+
+            <p class="mobile-text-padding mobile-text-size">   Parhoon Canada Inc. is dedicated to practising and consulting in the disciplines of vibration analysis, modal analysis, vibration based condition monitoring, noise control and reliability.
+                <br><br>    We are experts in modal analysis of structure and vibration analysis of rotatory equipment for many years. Our competency is to analyze vibration signals and to distinguish vibrational signatures so as to locate all sources of vibration at one time.
+                <br><br>   We employ wide range of methods, based on vibration analysis in all three phases of machine condition monitoring, namely fault detection, fault diagnosis and fault prognosis (prediction of remaining useful life). 
+            </p>
+        </div>
+        
+        <!-- <div class = "page" id="page3">
+            <div class="flex-box"  id="product-text"> 
+                <p>
+                Don´t overload the upper mid-range or treble during passages in the film that feature dialogue. Pop music convention states that space is left for the lead vocal, but this is three times as true for film soundtracks with dialogue content.
+                <br>
+                <a class="text-link" href="#">learn more about PARHOON</a>
+            </p>
+            </div>
+            <div class="flex-box" id="product-image">    
+                <img src="../Assets/MainPage/product-image.jpg" max-width="100%" max-height="100%" >
+            </div>
+        </div> -->
+        
+        
+        <div class="footer">
+            <p class="mobile-text-size" >
+                <span class="footer-wrap">&nbsp;&nbsp; <span class="footer-nowrap">41 Palomino Cres., Toronto, ON</span>  &nbsp;&nbsp;&nbsp;&nbsp; <span class="footer-nowrap">M2K 1W2</span> &nbsp;&nbsp; </span>
+                <br>
+                <span class="footer-wrap">&nbsp;&nbsp; <span class="footer-nowrap">info@parhoontech.com</span> &nbsp;&nbsp;&nbsp;&nbsp; <span class="footer-nowrap">416 319 4509</span> &nbsp;&nbsp; </span>
+            </p>
+        </div>
+
+        <script src="/JavaScript/AllPages.js"></script>
+        <!-- <script src="/JavaScript/MainPage.js"></script> -->
+
+    </body>
+</html>

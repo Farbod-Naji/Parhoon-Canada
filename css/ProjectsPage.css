@@ -1,0 +1,150 @@
+/* ------------------------------------ */
+* {box-sizing:border-box}
+
+#page1{
+    display: flex;
+    width: 100%;
+    margin-top: 5rem;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    min-height: calc(100vh - 12rem);
+}
+
+.text-link{
+    color: red;
+}
+
+/* ------------ only for large view ------------- */
+
+#slideshow1 {
+    width: 65%;
+    max-height: 720px;
+}
+
+#slideshow1 img{
+    max-height: 680px;
+    object-fit: contain;
+}
+
+/* ------------------------------------ */
+
+@media screen and (max-device-width: 560px){
+    .title{
+        right: calc(23% - 18rem) !important;      
+    }
+
+    .title p{
+        font-size: 1.5em !important;
+    }
+
+    .slogan{
+        right: calc(25.5% - 18rem) !important; 
+    }
+
+    .slogan p{
+        font-size: 1.7em !important;
+    }
+
+    #skills p{
+        font-size: 1.7em !important;
+    }
+
+    #page2{
+        padding: calc(85vh) 0 calc(85vh - 5rem) 0 !important;
+    }
+
+    .footer{
+        top: calc(270vh - 5rem) !important;
+    }
+  
+}
+
+
+
+@media screen and (max-width: 1020px) { 
+
+    /*
+    #page1{
+        background: white !important;
+    }
+
+    
+    #page1 .title{
+        width: 100%;
+        text-align: center;
+    
+        top: calc(40vh - 5rem) !important;
+        left: 0 !important;
+    }
+
+    #page1 .slogan{
+        width: 100%;
+        text-align: center;
+    
+        top: calc(60vh - 5rem) !important;
+        left: 0 !important;
+    }
+    */
+
+    /* ------------------------------------ */
+
+        /*
+    #page2 #about-image{
+        padding: 0;
+
+        top: 0% !important;
+     
+        width: 100% !important; 
+        height: 45% !important;
+    }
+
+    #page2 #about-text{
+        padding: 0;
+
+        top: 45% !important;
+        left: 0 !important;
+    
+        width: 100% !important;
+        height: 55% !important;
+    }
+    */
+
+    /* ------------------------------------ */
+
+        /*
+    #page3 #product-text{
+        top: 45% !important;
+        left: 0 !important;
+    
+        width: 100% !important; 
+        height: 55% !important;
+    }
+
+    #page3 #product-image{ 
+        top: 0% !important;
+     
+        width: 100% !important; 
+        height: 45% !important;
+    }
+    */
+}
+
+@media screen and (max-width: 720px) {
+
+    #page1 .title{
+        bottom: calc(53vh - 5rem);
+        right: 0;
+    }
+    
+    #page1 .slogan{
+        top: calc(58vh - 5rem);
+        right: 5rem;
+    }
+
+    #page1 .skills{
+        top: calc(58vh - 5rem);
+        right: 5rem;
+    }
+    
+}

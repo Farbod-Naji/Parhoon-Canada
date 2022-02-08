@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="viewport" content="width=device-width, initial-scale=0.41, maximum-scale=1" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <link rel="stylesheet" href="../../css/AllPages.css">
+        <link rel="stylesheet" href="../../css/AboutPage.css">
+
+        <title>Parhoon Canada Inc. - About Us</title>
+    </head>
+
+    <body>
+        <div class = "topNav">
+            <a href="MainPage.html" class = "icon">
+                <img src="../../Assets/logo.svg" height="45rem">
+                <p style="display:inline" class = "iconText1">arhoon</p>
+            </a>
+
+            <nav>
+                <img src="../../Assets/menu-icon.svg" height="25rem" id="menu-icon">
+                <ul>
+                    <li><a href="../English/AboutPage.html" class="not=show-class link-button" style="background-color: rgb(150, 150, 150); color: black; border-color: black;">English/فارسی</a></li>
+                    <li><a href="MainPage.html" class="link-button">صفحه اصلی</a></li>
+                    <li><a href="AboutPage.html" class="link-button">درباره ما</a></li>
+                    <li><a href="ContactPage.html" class="link-button">تماس با ما</a></li>
+                </ul>
+            </nav>
+        </div>
+    
+        <div class="page" id ="about-CEO">
+            
+            <div class="flex-box" id="CEO-text"> 
+                <div class="flex-box" id="CEO-text-box-1">
+                    <h1>About Our CEO:</h1>
+                </div>
+                
+                <div class="flex-box" id="CEO-text-box-2">
+                    <p>Parhonn canada Inc. was established in 2016 in Toronto, Ontario. Jalil Naji is founder and CEO. Jalil combined academic knowledge, intellectual curiosity, and industry/Lab experience to upgrade engineering systems in field of vibration, reliability, test and condition monitoring. Wide vibration knowledge and experimental vibration/modal test on composite, viscoelastic and innovative smart materials led him to be an outstanding expert in this filed.</p>
+                </div>
+                
+            </div>
+
+            <div class="flex-box" id="CEO-image">
+                <div class="flex-box" id="CEO-image-box-1">
+                    <img src="../../Assets/CEO-image.png" max-width="100%" max-height="100%" >
+                </div>
+
+                <div class="flex-box" id="CEO-image-box-2">
+                    <p>Jalil Naji PhD, PEng</p>
+                </div>
+            </div>
+
+
+
+            <div class="flex-box" id="publications">
+                <h3 style="text-align: left; height: fit-content; margin: 0; display: absolute;">Publications:</h3>
+                <ol>
+                    <li>
+                        <a class="text-link" href="https://www.cambridge.org/core/journals/journal-of-mechanics/article/vibration-behavior-of-laminated-composite-beams-integrated-with-magnetorheological-fluid-layer/EDDD1504C8BB67E884394872EB89303B" >Vibration Behavior of Laminated Composite Beams Integrated with Magnetorheological Fluid Layer. Journal of Mechanics. Cambridge University Press, 2017.</a>
+                    </li>
+
+                    <li>
+                        <a class="text-link" href="https://www.tandfonline.com/doi/abs/10.1080/15376494.2016.1255819" >Vibration characteristics of laminated composite beams with magnetorheological layer using layerwise theory. Journal Mechanics of Advanced Materials and Structures, Taylor & Francis Group, 2017.</a>
+                    </li>
+                    
+                    <li>
+                        <a class="text-link" href="https://www.sciencedirect.com/science/article/abs/pii/S0093641316301434" >Layerwise theory in modeling of magnetorheological laminated beams and identification of magnetorheological fluid. Mechanics Research Communications, Elsevier, 2016.</a>
+                    </li>    
+                </ol>
+            </div>
+
+        </div>
+
+
+        <div class = "footer">
+            <p id="flex-box footer-text">Phone Number: XXX XXXX XXXX 
+                <br>
+            Email: Parhoon.com</p>
+        </div>
+
+        <script>
+            ( function(){
+                var button = document.getElementById('menu-icon'),
+                    menu = document.querySelector('nav');
+    
+                    button.addEventListener('click', function(e) {
+                        menu.classList.toggle('menu-active');
+                        e.preventDefault();
+                    } );
+            } ) ()
+        </script>
+
+    </body>
+
+
+
+
+</html>

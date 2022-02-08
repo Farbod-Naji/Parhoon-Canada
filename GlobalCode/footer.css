@@ -1,0 +1,17 @@
+.footer{
+    text-align: center;
+    /* padding: 0.25% 0; */
+    padding: 0.25em 0;
+    font-size: 2.20rem;
+    background: rgb(70, 70, 70);
+    color: white;
+    white-space: nowrap;
+}
+
+.footer-wrap{
+    white-space: pre-wrap;
+}
+
+.footer-nowrap{
+    white-space: nowrap;
+}
