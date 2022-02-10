@@ -1,17 +1,35 @@
 .footer{
     text-align: center;
     /* padding: 0.25% 0; */
-    padding: 0.25em 0;
-    font-size: 2.20rem;
-    background: rgb(70, 70, 70);
+    padding: var(--dim-footer-padding) 0;
+
+    font-size: var(--ft-size-s1) ;
+    background: var(--clr-footer);
     color: white;
     white-space: nowrap;
 }
 
-.footer-wrap{
-    white-space: pre-wrap;
+.footer-line{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.footer-nowrap{
+.footer-info{
     white-space: nowrap;
+    margin: 0;
+}
+
+.footer-info-1{
+    width: 30ch;
+}
+
+.footer-info-2{
+    width: 17ch;
+}
+
+@media screen and (max-width: 546px){
+    .footer{
+        font-size: var(--ft-size-s1);
+    }
 }

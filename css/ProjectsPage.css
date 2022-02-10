@@ -4,7 +4,7 @@
 #page1{
     display: flex;
     width: 100%;
-    margin-top: 5rem;
+    margin-top: var(--dim-navbar-margin);
     justify-content: center;
     align-items: center;
     background: white;

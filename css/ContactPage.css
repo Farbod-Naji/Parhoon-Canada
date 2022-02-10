@@ -1,35 +1,23 @@
 #mainPage{
-    margin-top: 5rem;
-    /* height: max(calc(100vh - 5rem), 458px); */
-    /* height: min-content; */
-    /* min-height: min-content; */
-
-    overflow: hidden;
+    margin-top: var(--dim-navbar-margin);
+    min-height: calc(100vh - 13rem);
+    max-height: fit-content;
+    width: var(--dim-page-width-large);
+    gap: 0;
 }
 
-#mainPage img{
-    display: block;
+#contactImage{
     max-width: 60vw;
-    margin: auto;
 }
 
-
-/* ------------------------------------ */
-
-#contactInfo{
-    padding-left: 3em;
+#title {
+    text-align: center;
+    font-size: calc(2.5*var(--ft-size));
+    margin-top: 0;
+    margin-bottom: 0.5em;
 }
 
-#contactInfo #information{
-    padding-left: 1em;
-    font-size: 2.5rem;
-    
-    text-align: left;
-    white-space: normal;
-    
-}
-
-#contactInfo a{
+#contact-info a{
     font-weight: bold;
     text-decoration: underline;
     text-decoration-line: underline;
@@ -38,34 +26,20 @@
 
 /* ------------------------------------ */
 
-#title{
-    text-align: center;
-    font-size: 3em !important;
-}
 
-@media screen and (max-width: 1700px){
-    #mainPage img{
-        display: none;
-        /* flex-direction: column !important; */
-        /* gap: 0; */
-    }
-    
-    #contactInfo #information {
-        padding-left: 0.25em;
-    }
-}
 
-@media screen and (max-device-width: 770px){
+/* switch to the SMALL SCREEN(vertical view)  */
+@media screen and (max-width: 1300px){
+
     #mainPage{
-        width: 100%;
-    }
-
-    #contactInfo{
-        padding-top: 1rem;
-        padding-left: 0.5em;
+        flex-direction: column !important;
     }
     
-    #contactInfo #information {
-        padding-left: 0.25em;
+    #mainPage #contactImage{    
+        max-width: 100%;
+        margin-bottom: 0;
+        padding: 1rem;
     }
+
 }
+

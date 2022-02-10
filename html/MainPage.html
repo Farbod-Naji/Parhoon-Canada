@@ -7,41 +7,29 @@
 
 notes for next version:
     1. Reorganize the mainpage (add the last section to main page, add button and text for each page)
-    2. fix turbine img in capabilities
-    3. fix the fact that the white background color of the images against the gray color of the page make it look ugly 
-    
-    4. maybe change font [mina]
-    
-    5. fix footer for wraping weird
-
-    6. make the main page look better on bigger screen by adding padding to the top and bottom of the main page
-    
-    7. This page does not use demsos' API for the rendering of the image, instead it uses the given svg
-    8. why is the graph.svg look pixeled
-
-
-    2. set variable for white, grey and red colors used
-    3. get to the font family and typography
+    2. get to the font family and typography
+    3. This page does not use demsos' API for the rendering of the image, instead it uses the given svg.Why is the graph.svg look pixeled. this means a new svg need to be generated
     4. {change font size from em and pix to rem} and {make all dimension depend on the rem and em}
     5. setup SEO
     6. start the new setup formate for html that is class based ???
+    7. add so animation to the navbar (slight expansion)
+    8. compares all the images , add alt to image, add title to links
+    9. make mobile nav bar look better
+    10. make slide shows look better
+    11. add question or form to the final page
+
+    what changed since the last update:
+        1. reorganize all css and html files
+        2. simplifying the responisve ascept of the page by changing the global variable in AllPages.css. This way only the number of responive media querried per page is decreased which clear alot of css code up
+        3. the first page of the MainPage.html is reorganized and is setup 
 
 
-    8. figure out why is it the website does not load right when CTRL+S when device-max-width and device-width 
-
-    add so animation to the navbar (slight expansion)
-    compares all the images , add alt to image, add title to links
-    make mobile nav bar look better
-    make slide shows look better
-
-    add question or form to the final page
-
-    what changed from the last version:
-        1. modified AllPages.css by adding variable and classes that made the website easier to modify and more consistent in visuals
-        2. some visual changes by using more red and getting rid of the ugly grey color used before
-        3. 
-
-
+    bugs to fix in the next update:
+        1. about us first image too big for screen on safari ipad
+        2. the icon menu does no even work on the safari ipad(does not register)
+        3. the mobile nav is moved to the bottom of the screen when opened on chrome ipad
+        4. capabilites slide shows does not load imgs on ipad safari
+        5. imgs streched on the ipad chrome
 -->
 
 
@@ -63,7 +51,7 @@ notes for next version:
     
 
 
-        <script src="../JavaScript/jquery-3.5.1.js"></script>
+        <!-- <script src="../JavaScript/jquery-3.5.1.js"></script> -->
         <!-- <script src="https://www.desmos.com/api/v1.5/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script> -->
     
 
@@ -72,7 +60,7 @@ notes for next version:
         <!-- <meta name="keywords" content=""> -->
         <!-- <meta name="author" content=""> -->
     
-        <link rel="icon" href="../Assets/NavBar/logo.svg">
+        <link rel="icon" href="../Assets/NavBar/logo.png">
         <!-- <link rel="shortcut icon" type="image/ico" href="../Assets/NavBar/logo.svg"> -->
 
     </head>
@@ -91,7 +79,7 @@ notes for next version:
                 <!-- <li><a href="../Farsi/MainPage.html" class="not-show-class link-button" id="multi-language-button"><p>English/فارسی</p></a></li> -->
                 <li><a href="/html/MainPage.html" class="link-button"><p>Home</p></a></li>
                 <li><a href="/html/AboutPage.html" class="link-button"><p>About us</p></a></li>
-                <li><a href="/html/CapabilitiesPage.html" class="link-button"><p>Capabilities</p></a></li>
+                <li><a href="/html/CapabilitiesPage.html" class="not-show-class link-button"><p>Capabilities</p></a></li>
                 <li><a href="/html/ProjectsPage.html" class="not-show-class link-button"><p>Projects</p></a></li>
                 <li><a href="/html/ContactPage.html" class="link-button"> <p>Contact us</p></a></li>
             </ul>
@@ -109,19 +97,11 @@ notes for next version:
             <p class="skills">Vibration Analysis, Modal Analysis, Vibrational Monitoring, Noise Control, Reliability</p>
         </div>
 
-        <!--
-        <div class = "navArrow">
-            <img src="/Assets/arrow-up.svg" height="65px" class = "upArrow">
-            <br>
-            <img src="/Assets/arrow_down.svg" height="65px" class = "downArrow">
-        </div>
-        -->
-
         <div class="page-setup page-line img-info-template reverse-img-info-template" id="page2">
             
             <img src="../Assets/MainPage/Engine.gif">
 
-            <p class="mobile-text-padding mobile-text-size">   Parhoon Canada Inc. is dedicated to practising and consulting in the disciplines of vibration analysis, modal analysis, vibration based condition monitoring, noise control and reliability.
+            <p>   Parhoon Canada Inc. is dedicated to practising and consulting in the disciplines of vibration analysis, modal analysis, vibration based condition monitoring, noise control and reliability.
                 <br><br>    We are experts in modal analysis of structure and vibration analysis of rotatory equipment for many years. Our competency is to analyze vibration signals and to distinguish vibrational signatures so as to locate all sources of vibration at one time.
                 <br><br>   We employ wide range of methods, based on vibration analysis in all three phases of machine condition monitoring, namely fault detection, fault diagnosis and fault prognosis (prediction of remaining useful life). 
             </p>
@@ -140,14 +120,17 @@ notes for next version:
             </div>
         </div> -->
         
-        
         <div class="footer">
-            <p class="mobile-text-size">
-                <span class="footer-wrap">&nbsp;&nbsp; <span class="footer-nowrap">41 Palomino Cres., Toronto, ON</span>  &nbsp;&nbsp;&nbsp;&nbsp; <span class="footer-nowrap">M2K 1W2</span> &nbsp;&nbsp; </span>
-                <br>
-                <span class="footer-wrap">&nbsp;&nbsp; <span class="footer-nowrap">info@parhoontech.com</span> &nbsp;&nbsp;&nbsp;&nbsp; <span class="footer-nowrap">416 319 4509</span> &nbsp;&nbsp; </span>
-            </p>
+            <div class="footer-line">
+                <p class="footer-info footer-info-1">41 Palomino Cres., Toronto, ON</p>
+                <p class="footer-info footer-info-2">M2K 1W2</p>
+            </div>
+            <div class="footer-line">
+                <p class="footer-info footer-info-1">info@parhoontech.com</p>
+                <p class="footer-info footer-info-2">+1 (416)-319-4509</p>
+            </div>
         </div>
+
 
         <script src="../JavaScript/AllPages.js"></script>
         <!-- <script src="/JavaScript/MainPage.js"></script> -->

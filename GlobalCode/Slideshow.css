@@ -22,13 +22,16 @@
     top: 50%;
     width: auto;
     padding: 16px;
-    color: black;
+
+    color: white;
+    background-color: rgba(0,0,0,0.5);
     font-weight: bold;
     font-size: 18px;
     transform: translateY(-50%);
     transition: background-color 600ms ease;
     border-radius: 0 3px 3px 0;
     user-select: none;
+
 }
 
 /* Position the "next button" to the right */
@@ -39,9 +42,9 @@
 
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
-    color: whitesmoke !important;
-    background-color: rgba(0,0,0,0.8);
-    text-shadow: none !important;
+    color: whitesmoke;
+    background-color: rgba(0,0,0,0.9);
+    text-shadow: none;
 }
 
 /* Caption text */
@@ -93,7 +96,7 @@
 
 /* Adding the white background to all of our UI elements */
 .slide_UI_element{
-    text-shadow: 0 0 1rem white, 0 0 1rem white , 0 0 1rem white, 0 0 1rem white;
+    /* text-shadow: 0 0 1rem white, 0 0 1rem white , 0 0 1rem white, 0 0 1rem white; */
 }
 
 /* Fading animation */

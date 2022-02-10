@@ -1,217 +1,129 @@
+/* 
+815x 627px
+*/
+
 #CEO-page{
     display: grid;
     grid-template-columns: repeat(2, auto);
     grid-template-rows: repeat(2, auto);
-    margin-top: 5.25rem;
+    margin-top: var(--dim-navbar-margin);
     gap: var(--dim-gap);
-    width: 95%;
+    width: var(--dim-page-width-large);
 } 
 
 
-/* ------------------------------------ */
+/* -----------------CEO Page------------------- */
 
-#CEO-page #CEO-intro-profile{
+#CEO-image-box{
     display: flex;
     flex-direction: column;
     order: 1;
     grid-row: span 2;
-}
-
-#CEO-page #CEO-intro-profile img{
     margin: auto;
-    margin-bottom: 0;
-    max-height: 725px;               /* setting the maximum size limit for image */
-    max-width: max(55vw , min(360px, 100%));    /* setting the minimum size limit for image */
-    padding: 2rem;
-    padding-bottom: 1rem;
 }
 
-#CEO-page  #CEO-intro-profile p{
+#CEO-image-box img{
+    max-height: 725px;                 /* setting the maximum size limit for image */
+    max-width: 100%;                   /* setting the minimum size limit for image */
+
+    padding: var(--dim-padding);
+    padding-bottom: 0;
+
+    margin: auto;
+}
+
+#CEO-image-box p{
+    font-size: var(--ft-size-s3);
+    padding: calc(var(--dim-padding) * 0.5) 0;
+
     margin: auto;
     margin-top: 0;
-    font-size: 1.8rem;
-    padding-bottom: 1em;
 }
 
+/* ---- */
 
-/* ------------------------------------ */
-#CEO-page #CEO-intro-text{
-    margin: auto;
+#CEO-text{
     order: 0;
-    font-size: 2.5rem;
-    align-items: end;
-}
-
-#CEO-page #CEO-intro-text p{
-    display: block;
-    white-space: pre-wrap;
-    padding: 2rem;
-    margin: 0;
-}
-
-
-
-#CEO-page #CEO-profile p{
-    display: block;
+    padding: var(--dim-padding);
     margin: auto;
-    text-align: center;
 }
 
-/* ------------------------------------ */
+/* ---- */
 
-#CEO-page #CEO-intro-publications{
+#CEO-publications{
     order: 2;
-
-    font-size: 2.5rem;
-    padding: 2rem;
+    padding: var(--dim-padding);
 }
 
-#CEO-page #CEO-intro-publications h3{
+#CEO-publications h3{
     margin-top: 0;
 }
 
-#CEO-page #CEO-intro-publications ol{
-    display: block;
-    width: auto;
+#CEO-publications ol{
     padding-left: 1.1em;
     margin: 0;
 }
 
-#CEO-page #CEO-intro-publications ol li{
-    text-align: left;
-    margin-top: 2%;
+#CEO-publications ol li{
+    margin-top: 0.75em;
 }
 
-#CEO-page #CEO-intro-publications ol li a{
-    width: 100%;
-    color: blue;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-#CEO-page #CEO-intro-publications ol li a p{
+#CEO-publications ol li a p{
     display: inline;
     color: black;
 }
 
-#CEO-page #CEO-intro-publications ol li a .ref{
-    text-decoration: underline !important;
+#CEO-publications ol li a .ref{
+    text-decoration: underline;
     font-size: 0.75em;
-
 }
 
 /* ------------------------------------ */
 
-.tool-page{
-    display: flex;
-    font-size: 2.5rem;
-}
-
-#tool2{
-    flex-direction: row;
-    background: white;
-}
-
-.tool-page p{
-    margin: auto;
-    padding: 1em;
-}
 
 .tool-page img{
-    margin: auto;
-    padding: 1em;
-
     max-width: 60%;
     max-height: 650px;
 }
 
 /* ------------------------------------ */
 
-@media screen and (max-device-width: 770px){
-
-    #CEO-page #CEO-intro-publications {
-        padding: 0.5rem;
-    }
-
-    #CEO-page #CEO-intro-text p {
-        padding: 1rem;
-    }
-
-    .tool-page p{
-        padding: 0.5em !important;
-    }
-    
-    .tool-page img{
-        padding: 0.5em !important;
-    }
-
-}
-
+/* move publication down on the page */
 @media screen and (max-width: 1400px){
     #CEO-page{
-        gap: 1rem;
-        row-gap: 0;
+        gap: 0;
     }
 
-    #CEO-page #CEO-intro-profile{
+    #CEO-page #CEO-image-box{
         grid-row: span 1;
     }
 
-    #CEO-page #CEO-intro-publications{
+    #CEO-page #CEO-image-box img{
+        max-width: min(100% ,420px); 
+    }
+
+    #CEO-page #CEO-publications{
         grid-column: span 2;
     }
+    
 }
 
-@media screen and (max-device-width: 750px), (max-width: 815px){
-    #CEO-page{
-        display: block !important;
-    }
-
-    #CEO-page #CEO-intro-profile{
-        float: right;
-    }
-}
-
-@media screen and (max-device-width: 560px), (max-width: 600px){
-
-    #CEO-page #CEO-intro-profile img{
-        margin-top: 0;
-    }
-
-    #CEO-page #CEO-intro-profile p{
-        padding-bottom: 0;
-    }
-
-    #CEO-page #CEO-intro-profile{
-        float: none;
-    }
-
-}
-
-@media screen and (max-device-width: 560px){
-
-    #CEO-page #CEO-image #CEO-image-box p{
-        font-size: 1.5rem;
-    }
-
-    #CEO-page #publications ol li:first-of-type{
-        margin-top: 5rem !important;
-    }
-
-}
-
-
-@media screen and (max-device-width: 640px), (max-width: 1150px) {
+/* make the view on the tool pages vertical */
+@media screen and (max-width: 1150px) {
 
     .tool-page{
         flex-direction: column !important;
     }
 
-    .tool-page p{
-        padding: 1em 1.5em;
+    .tool-page img{
+        max-width: min(100% ,732px); 
     }
 
-    .tool-page img{
-        max-width: 90%;
+}
+
+/* make the ceo page all vertical*/
+@media screen and (max-width: 960px){
+    #CEO-page{
+        display: block !important;
     }
 }

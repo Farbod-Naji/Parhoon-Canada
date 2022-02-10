@@ -11,32 +11,50 @@ html{
     --clr-white: white;
     --clr-grey: rgb(224, 224, 224);
     --clr-dark-grey: rgb(70, 70, 70);
+    
     --clr-background: var(--clr-white);
-    /* --clr-footer: var(--); */
     --clr-line: var(--clr-red);
+    --clr-footer: var(--clr-dark-grey);
 
+    /*---*/
 
-    --dim-padding: 6rem;
-    --dim-width: 90%;
+    --dim-navbar-margin: 5.25rem;
+
+    --dim-page-padding: 2.5em;
+    --dim-page-width: 90%;
+    --dim-page-width-large: 95%;
+
     --dim-line-width: 80vw;
     --dim-line-thickness: 1px;
     
-    --dim-gap: 5rem;
+    --dim-gap: 2em;
+    --dim-padding: 1em;
 
-    --dim-box-padding: 0.75rem;
-    --dim-box-padding: 0.75rem;
+    --dim-footer-padding: 1em;
+    /* --dim-footer-height: ; */
+
+    --dim-box-container-padding: 0.75rem;
+    --dim-box-container-padding: 0.75rem;
+
+    /*---*/
 
     --ft-base-size: 2.5rem;
 
-    --ft-size-b2: calc( 1.2 * var(--ft-base-size) );
-    --ft-size-b1: calc( 1.1 * var(--ft-base-size) );
-    --ft-size: var(--ft-base-size);
-    --ft-size-s1: calc( 0.9 * var(--ft-base-size) );
-    --ft-size-s2: calc( 0.8 * var(--ft-base-size) );
+    --ft-size-b2: calc( 1.2 * var(--ft-size) );
+    --ft-size-b1: calc( 1.1 * var(--ft-size) );
+    --ft-size: var(--ft-base-size);                 
+    --ft-size-s1: calc( 0.9 * var(--ft-size) );
+    --ft-size-s2: calc( 0.8 * var(--ft-size) );
+    --ft-size-s3: calc( 0.7 * var(--ft-size) );
 
-    --shadow: 0 0 1em rgba(0,0,0, .25); 
 
     /* --font-type: ; */
+
+    /*---*/
+
+    --dim-small-breakpoint: 520px;
+
+    /* --shadow: 0 0 1em rgba(0,0,0, .25);  */
 }
 
 body {
@@ -48,10 +66,12 @@ body {
 /* ------------------------------------ */
 
 .page-setup{
-    width: var(--dim-width);
-    padding: var(--dim-padding) 0;
-    background-color: var(--clr-background);
+    width: var(--dim-page-width);
+    padding: var(--dim-page-padding) 0;
     margin: auto;
+
+    background-color: var(--clr-background);
+    font-size: var(--ft-size);
 }
 
 .page-line{
@@ -84,50 +104,37 @@ body {
     margin: 0 auto;
 
     gap: var(--dim-gap);
-    
-    font-size: var(--ft-size);
 }
 
 .reverse-img-info-template{
     flex-direction: row-reverse;
 }
 
-
 /* both image and text */
 .img-info-template > *{
     display: block;
-    padding: 1em;
+    padding: var(--dim-padding);
     margin: auto;
 }
 
-/* only image */
-.img-info-template > *:nth-child(1){
-    
+.img-info-template > *:nth-child(1){    
+    flex: 1 0 auto;
 }
 
-/* only text */
-.img-info-template > *:nth-child(2){
-
-}
+/* .img-info-template > *:nth-child(2){    only text    } */
 
 /* ------------------------------------ */
 
 .box-container{
-    padding: 0.5em;
+    padding: var(--dim-box-container-padding);
     background-color: var(--clr-red);
 }
 
 .box-container img{
-    box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.37)
+    box-shadow: 0 0 var(--dim-box-container-padding) rgba(0, 0, 0, 0.37)
 }
 
 /* ------------------------------------ */
-
-.flex-box{
-    /* not used anywhere */
-    display: flex;
-}
-
 
 /* make the images and the nav bar not ele*/
 img, .navBar, .slideshow-container{
@@ -140,42 +147,27 @@ img, .navBar, .slideshow-container{
 }
 
 /* ------------------------------------ */
-@media screen and (max-width: 700px){
+@media screen and (max-width: 750px){
 
-    .img-info-template > *{
-        padding: 0.5em !important;
-    }
+    :root{
+        --dim-padding: calc( var(--ft-base-size) * 0.5 );
+    }   
 }
 
-@media screen and (max-device-width: 425px){
-
-    .mobile-text-padding{
-        padding-left: 1rem !important;
-        padding-right: 1rem !important;
+@media screen and (max-width: 546px){
+    :root{
+        --ft-size: calc( var(--ft-base-size) * 0.9 );
+        --dim-page-padding: 3rem !important;
+        --dim-page-width: 100%;
+        --dim-page-width-large: 100%;
     }
 
-    .mobile-text-padding-small{
-        padding: 0.5rem !important;
+    .small-mode-padding-left{
+        padding-left: 0.5em !important;
     }
 
     .mobile-text-size{
         font-size: 0.9em !important;
     }
-
-    .page-setup{
-        width: 100% !important;
-    }
-
-    .img-info-template > *{
-        padding: 0.5em !important;
-    }
     
-}
-
-@media screen and (max-device-width: 560px){
-
-    .info-text{
-        font-size: 2.3em !important;
-    }
-
 }

@@ -54,7 +54,6 @@ function Check_Menu_Button(){
         menu.classList.toggle("menu-active");
         e.preventDefault();
         if(menu.classList.contains("menu-active")){
-            //the menu is closing
             button[0].src = "../Assets/NavBar/menu-close-icon.svg";
             button[0].style.margin = "0 0 0 0"
         }
@@ -91,8 +90,7 @@ async function Check_Location(){
     const input = await fetch(API_request);
     const data = await input.json();
 
-
-    if (data.country_name != "Canada"){
+    if ((data.country_name != "Canada") && (data.country_name != "United States")) {
         Switched_Button[0].style.display = "block";
         Switched_Button[1].style.display = "block";
     } 
